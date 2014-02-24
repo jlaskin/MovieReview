@@ -2,7 +2,7 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/home/index
 
-I added Show, Edit, and Delete functionality to my implementions of Users and Recommendations.
+For HW5: I added Show, Edit, and Delete functionality to my implementions of Users and Recommendations.
 
 Users has fields for Name, Email, and Password.
 

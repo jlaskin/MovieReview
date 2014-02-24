@@ -1,16 +1,17 @@
 <table>
 	<tr>
-		<td>Name</td>
-		<td>Email</td>
-		<td>Password</td>
+		<td><b>Name</b></td>
+		<td><b>Email</b></td>
+		<td><b>Password</b></td>
 	</tr>
 	<%@users.each do |user|%>
 	<tr>
-		<td><%=user.name%></td>
+		<td><%=link_to user.name, user_path(user.id)%></td>
 		<td><%=user.email%></td>
 		<td><%=user.password%></td>
+		<td><%=link_to "Edit", edit_user_path(user.id)%> </td>
+		<td><%=button_to "Destroy", user, method: :delete %></td>
 	</tr>
 	<%end%>
 </table>	
-
 <%=link_to "Return Home", home_index_path%>

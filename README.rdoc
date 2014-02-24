@@ -2,7 +2,7 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/home/index
 
-I implemented Users and Recommendations.
+I added Show, Edit, and Delete functionality to my implementions of Users and Recommendations.
 
 Users has fields for Name, Email, and Password.
 
@@ -10,5 +10,5 @@ Recommendations has fields for Title, Body, and User.
 
 Each recommendation belongs_to a user.
 
-This was late because of the ongoing computer issues I had at the start of the semester.  Jenny is aware and says I should not lose points. 
+
 <tt>rake doc:app</tt>.

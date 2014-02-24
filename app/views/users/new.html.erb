@@ -1,19 +1,18 @@
 <%= form_for(@user) do |f| %>
 	<div class="field">
-		<p>Name</p> 
+		<p><b>Name</b></p> 
 		<%= f.text_field :name%>
 	</div>
 	<div class="field">
-		<p>Email</p> 
+		<p><b>Email</b></p> 
 		<%= f.text_field :email%>
 	</div>
 	<div class="field">
-		<p>Password</p> 
+		<p><b>Password</b></p> 
 		<%= f.text_field :password%>
 	</div>
 	<div class="actions">
 		<%= f.submit %>
 	</div>
 <% end %>
-
 <%=link_to "Return Home", home_index_path%>

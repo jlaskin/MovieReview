@@ -1,2 +1,17 @@
-<h1>Recommendations#edit</h1>
-<p>Find me in app/views/recommendations/edit.html.erb</p>
+<%=form_for(@recommendation) do |f|%>
+	<div class="field">
+		<p><b>Title</b></p>
+		<%=f.text_field :title%>
+	</div>
+	<div class="field">
+		<p>Body</p>
+		<%=f.text_field :body%>
+	</div>
+	<div class="field">
+		<p>User</p>
+		<%=f.collection_select :user_id, User.all, :id, :name%>
+	</div>
+	<div class="actions">
+		<%=f.submit%>
+	</div>
+<%end%>

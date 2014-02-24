@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<td>Title</td>
+		<td>Body</td>
+		<td>User</td>
+	</tr>
+	<%@recommendations.each do |recommendation| %>
+	<tr>
+		<td><%=recommendation.title%></td>
+		<td><%=recommendation.body%></td>
+		<td><%=recommendation.user.name unless recommendation.user.nil?%></td>
+	</tr>
+	<%end%>
+</table>
+
+<%=link_to "Return Home", home_index_path%>
+
+

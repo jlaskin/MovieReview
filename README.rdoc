@@ -1,28 +1,14 @@
 == README
+Heroku Link:
+http://afternoon-reaches-8605.herokuapp.com/home/index
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I implemented Users and Recommendations.
 
-Things you may want to cover:
+Users has fields for Name, Email, and Password.
 
-* Ruby version
+Recommendations has fields for Title, Body, and User.
 
-* System dependencies
+Each recommendation belongs_to a user.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
+This was late because of the ongoing computer issues I had at the start of the semester.  Jenny is aware and says I should not lose points. 
 <tt>rake doc:app</tt>.

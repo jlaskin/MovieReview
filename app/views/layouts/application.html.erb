@@ -6,7 +6,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p class="notice"><%=notice%></p>
+<p class="alert"><%alert%></p>
+<div class="navbar">
+	<ul class="nav">
+		<% if !user_signed_in? %>
+		<li>
+			<%=button_to 'Login', new_user_session_path %>
+		</li>
+		<%else%>
+		<li>
+			<%=button_to 'Logout', destroy_user_session_path, :method => :delete, :class => "nav-link" %>
+		</li>
+		<li>
+			<%=button_to 'Edit User', edit_user_registration_path, :method =>:get, :class => "nav-link"%>
+		</li> 
 
+		<%end%>
+		<li>
+			<%=button_to "Home", root_path, :method => :get %>
+		</li>
+	</ul>	
+</div>
 <%= yield %>
 
 </body>

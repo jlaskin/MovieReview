@@ -1,7 +1,11 @@
 App::Application.routes.draw do
+    
+  
+  devise_for :users
   
   get "home/index"
-  resources :users
+  resources :users, only: [:index]
+  get '/users/show/:id', to: 'users#show', as: 'user'
   resources :recommendations
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

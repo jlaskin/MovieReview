@@ -1,14 +1,9 @@
 == README
 Heroku Link:
-http://afternoon-reaches-8605.herokuapp.com/home/index
+http://afternoon-reaches-8605.herokuapp.com/
 
-For HW5: I added Show, Edit, and Delete functionality to my implementions of Users and Recommendations.
+For HW6: I added Devise to my app, and cleaned up some of the design of the page by adding a navbar.
 
-Users has fields for Name, Email, and Password.
-
-Recommendations has fields for Title, Body, and User.
-
-Each recommendation belongs_to a user.
-
+I had an issue with the login/logout feature causing massive errors, which is why this is late (I had to meet with Jenny to resolve it), even though it ultimately was caused by a single link needing to be changed to a button.  Jenny said I shouldn't lose points for that.
 
 <tt>rake doc:app</tt>.

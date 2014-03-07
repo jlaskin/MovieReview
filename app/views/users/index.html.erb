@@ -2,14 +2,11 @@
 	<tr>
 		<td><b>Name</b></td>
 		<td><b>Email</b></td>
-		<td><b>Password</b></td>
 	</tr>
 	<%@users.each do |user|%>
 	<tr>
 		<td><%=link_to user.name, user_path(user.id)%></td>
 		<td><%=user.email%></td>
-		<td><%=user.password%></td>
 	</tr>
 	<%end%>
 </table>	
-<%=link_to "Return Home", home_index_path%>

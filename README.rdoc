@@ -2,8 +2,10 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-For HW6: I added Devise to my app, and cleaned up some of the design of the page by adding a navbar.
+For HW7: I added validations to my app, and cleaned up some of the design of the page.
 
-I had an issue with the login/logout feature causing massive errors, which is why this is late (I had to meet with Jenny to resolve it), even though it ultimately was caused by a single link needing to be changed to a button.  Jenny said I shouldn't lose points for that.
+I added presence validations for the title and body fields of my recommendations.
+I also added length validations for title and body to assign maximum input lengths.
+Lastly, I added a uniqueness validation for the title field for recommendations.
 
 <tt>rake doc:app</tt>.

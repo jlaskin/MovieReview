@@ -4,14 +4,23 @@
 		<%=f.text_field :title%>
 	</div>
 	<div class="field">
-		<p>Body</p>
+		<p><b>Body</b></p>
 		<%=f.text_field :body%>
 	</div>
 	<div class="field">
-		<p>User</p>
 		<%=f.hidden_field :user_id, :value=>current_user.id%>
 	</div>
 	<div class="actions">
 		<%=f.submit%>
 	</div>
 <%end%>
+
+<div class="error-msg">
+	<%if @recommendation.errors.any? %>
+	<ul>
+		<% @recommendation.errors.full_messages.each do |msg| %>
+		<li><%=msg%></li>
+		<%end%>
+	</ul>
+	<%end%>
+</div>	

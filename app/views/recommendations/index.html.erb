@@ -1,13 +1,11 @@
 <table>
 	<tr>
-		<td>Title</td>
-		<td>Body</td>
-		<td>User</td>
+		<td><b>Title</b></td>
+		<td><b>User</b></td>
 	</tr>
 	<%@recommendations.each do |recommendation| %>
 	<tr>
 		<td><%=link_to recommendation.title, recommendation_path(recommendation.id)%></td>
-		<td><%=recommendation.body%></td>
 		<td><%=recommendation.user.name unless recommendation.user.nil?%></td>
 		<td><%=link_to "Edit", edit_recommendation_path(recommendation.id)%> </td>
 		<td><%=button_to "Destroy", recommendation, method: :delete %></td>

@@ -17,6 +17,7 @@ def create
     redirect_to recommendation_path
   else
     if @recommendation.save
+      Notifications.new_recommendation(current_user).deliver
       redirect_to recommendations_path
     else
       render 'new'

@@ -6,11 +6,12 @@ class Notifications < ActionMailer::Base
   #
   #   en.notifications.new_comment.subject
   #
-  def new_user
-    @greeting = "Hello, Matey!"
-    @id = user.id
-    @user= user.name
+  
 
-    mail to: "user.email"
+  def new_recommendation(user)
+    @greeting="Congratulations, Chap!"
+    @id=user.id
+    @user= user.name
+    mail to: user.email
   end
 end

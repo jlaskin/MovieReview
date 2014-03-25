@@ -2,10 +2,9 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-For HW7: I added validations to my app, and cleaned up some of the design of the page.
+For HW8: I added SendGrid to my app to allow the app to send outgoing mail, and I aso cleaned up some of the design of the page.
 
-I added presence validations for the title and body fields of my recommendations.
-I also added length validations for title and body to assign maximum input lengths.
-Lastly, I added a uniqueness validation for the title field for recommendations.
+I added functionality to have the app send a confirmation email to a user's email address when that user creates a new recommendation.
+I ran into some trouble pushing to heroku, even when it worked locally, but it was just typo in my config -> environments -> production file.
 
 <tt>rake doc:app</tt>.

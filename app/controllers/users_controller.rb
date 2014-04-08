@@ -41,5 +41,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @recommendations = Recommendation.where(user_id: @user.id).order(:title).limit(5)
   end
 end

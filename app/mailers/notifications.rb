@@ -9,7 +9,7 @@ class Notifications < ActionMailer::Base
   
 
   def new_recommendation(user)
-    @greeting="Congratulations, Chap!"
+    @greeting="Congratulations Chap"
     @id=user.id
     @user= user.name
     mail to: user.email

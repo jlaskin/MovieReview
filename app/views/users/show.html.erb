@@ -1,7 +1,15 @@
 <div>
-	<h2>User</h2>
+	<h2>User's Information:</h2>
 	<h4>Name:</h4>
 	<p><%=@user.name%></p>
 	<h4>Email:</h4>
 	<p><%=@user.email%></p>
 </div>
+
+<h2>User's Recommendations:</h2>
+<%@recommendations.each do |recommendation|%>
+	<div class="dash-review">
+		<h><%=link_to recommendation.title, recommendation_path(recommendation.id)%></h2>
+		<p><%=recommendation.body%></p>
+	</div>
+<%end%>

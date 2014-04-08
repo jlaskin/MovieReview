@@ -2,9 +2,11 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-For HW8: I added SendGrid to my app to allow the app to send outgoing mail, and I aso cleaned up some of the design of the page.
+For HW9 I added queries to my app.  
 
-I added functionality to have the app send a confirmation email to a user's email address when that user creates a new recommendation.
-I ran into some trouble pushing to heroku, even when it worked locally, but it was just typo in my config -> environments -> production file.
+I incuded an Ordering query to change the index page for recommendations (the view all recommendations page) to list stored recommendations alphabetically by User.  I added a .order title to the recommendations_controller to accomplish this.
 
-<tt>rake doc:app</tt>.
+I also added condition, order, and limit queries to my users_controller.  Now when you select a user by from the list presented by clicking the View Users link, it lists the user's name and email, but also now follows that with a list of recommendations that user has submitted.  It queries the database for recommendations belonging to the user, orders them alphabetically, then shows up to a maximum of 5 of them (there is a limit of 5).  The view for users\show view has been altered to accomodate these queries and present the information.
+
+Between these, I added the required total of 4 queries including a minimum of 1 Condition, 1 Ordering, and 1 Limit/Offset.
+

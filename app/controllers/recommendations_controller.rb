@@ -1,6 +1,6 @@
 class RecommendationsController < ApplicationController
  def index
-  @recommendations = Recommendation.all
+  @recommendations = Recommendation.all.order(:user_id)
 end
 
 def new

@@ -2,11 +2,4 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-For HW9 I added queries to my app.  
-
-I incuded an Ordering query to change the index page for recommendations (the view all recommendations page) to list stored recommendations alphabetically by User.  I added a .order title to the recommendations_controller to accomplish this.
-
-I also added condition, order, and limit queries to my users_controller.  Now when you select a user by from the list presented by clicking the View Users link, it lists the user's name and email, but also now follows that with a list of recommendations that user has submitted.  It queries the database for recommendations belonging to the user, orders them alphabetically, then shows up to a maximum of 5 of them (there is a limit of 5).  The view for users\show view has been altered to accomodate these queries and present the information.
-
-Between these, I added the required total of 4 queries including a minimum of 1 Condition, 1 Ordering, and 1 Limit/Offset.
-
+For HW10 I added hide/unhide functionality using JavaScript.  In the Users Index (the page accessed by clicking "view users" from the home page), when you click on an individual user, the default behavior is to show the first 5 (up to 5) recommendations made by that user in alphabetical order.  I added a button which hides/unhides those recommendations.

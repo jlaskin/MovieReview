@@ -9,8 +9,10 @@
 	<tr>
 		<td><%=link_to recommendation.title, recommendation_path(recommendation.id)%></td>
 		<td><%=recommendation.user.name unless recommendation.user.nil?%></td>
-		<td><%=link_to "Edit", edit_recommendation_path(recommendation.id)%> </td>
-		<td><%=button_to "Destroy", recommendation, method: :delete %></td>
+		<% if current_user.id == recommendation.user.id %>
+			<td><%=link_to "Edit", edit_recommendation_path(recommendation.id)%> </td>
+			<td><%=button_to "Destroy", recommendation, method: :delete %></td>
+		<%end%>
 	</tr>
 	<%end%>
 </table>

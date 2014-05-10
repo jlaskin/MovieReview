@@ -2,7 +2,7 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-My App implements a platform to review movies.  The primary elements of the App are users and the recommendations that those users create.  Users can title their own reviews, which can be seen by all other users (and visitors who are not signed in).  Users can also choose to follow other users, and when you follow a user they receive an email informing them that they have gained a new follower.  Add
+My App implements a platform to review movies.  The primary elements of the App are users and the recommendations that those users create.  Users can title their own reviews, which can be seen by all other users (and visitors who are not signed in), but the reviews can only be edited or deleted by the user that created it.  Users can also choose to follow/unfollow other users, and when you follow a user they receive an email informing them that they have gained a new follower.  
 
 I incuded an Ordering query to change the index page for recommendations (the view all recommendations page) to list stored recommendations alphabetically by User.  I added a .order title to the recommendations_controller to accomplish this.
 
@@ -16,5 +16,5 @@ My app implements the gem Devise, which provides log-in functionality and user a
 My app implements the Heroku addon SendGrid.  SendGrid allows my App to send outbound emails, which the app utilizes to send notifications when a user creates a new recommendation or receives a new follower.  Documentation for SendGrid can be found at https://devcenter.heroku.com/articles/sendgrid
 
 
-My Javascript/jQuery code is located in users.js.  It provides the option to Show/Hide a user's recommendations within a given User's show page.
+My Javascript/jQuery code is located in users.js.  It provides the option to Show/Hide a user's recommendations within a given User's show page. The purpose of this is to offer the viewer a way to unclutter the page, if they are not actually interested in viewing content of recommendations.
 

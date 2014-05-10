@@ -15,7 +15,5 @@ $(document).on("page:load", function(){
 		$(".square").css({width: 75, height: 75});
 	});
 
-
-});
 });
 

@@ -1,12 +1,33 @@
-<div>
-	<h2>User's Information:</h2>
-	<h4>Name:</h4>
-	<p><%=@user.name%></p>
+<div class= "User-Dashboard">
+	<h2><%=@user.name%>'s User Information:</h2>
 	<h4>Email:</h4>
 	<p><%=@user.email%></p>
+	<h4>Following:</h4>
+	<table>
+	<% @following.each do |follow| %>
+	<tr>
+		<div class = "following">
+			<td><%= link_to follow.followee.name, user_path(follow.followee_id)%></td>
+		</div>
+	</tr>
+	<%end%>
+	</table>
+	<h4>Followed By:</h4>
+	<table>
+	<% @followers.each do |follow| %>
+	<tr>
+		<div class="followers">
+		<td><%= link_to follow.follower.name, user_path(follow.follower.id)%></td>
+		</div>
+	</tr>
+	<%end%>
+	</table>
 </div>
 
-<h2>User's Recommendations:</h2>
+	
+
+
+<h2><%= @user.name%>'s Recommendations:</h2>
 <%@recommendations.each do |recommendation|%>
 	<div class="dash-review">
 		<h><%=link_to recommendation.title, recommendation_path(recommendation.id)%></h2>
@@ -15,3 +36,5 @@
 <%end%>
 
 <button class="hide-btn">Hide Recommendations</button>
+
+

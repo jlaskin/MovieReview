@@ -7,6 +7,12 @@ class Notifications < ActionMailer::Base
   #   en.notifications.new_comment.subject
   #
   
+  def followed(follow)
+    @greeting = "hey there!"
+    @follower = follow.follower.name
+    @id = follow.follower_id
+    mail to: follow.followee.email
+  end
 
   def new_recommendation(user)
     @greeting="Congratulations Chap"

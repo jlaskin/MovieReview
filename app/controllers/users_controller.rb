@@ -42,5 +42,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @recommendations = Recommendation.where(user_id: @user.id).order(:title).limit(5)
+    @followers = Follower.where(followee_id: @user.id)
+    @following = Follower.where(follower_id: @user.id)
   end
+
+  def dash 
+    if user_signed_in?
+      @user = current_user
+      @followers = Follower.where(follower_id: current_user.id)
+    else
+      redirect_to users_path
+    end
+  end 
 end

@@ -1,0 +1,11 @@
+<h2><%=current_user.name%> </h2>
+
+
+
+<% @recommendations.each do |recommendation| %>
+	<div class="dash-review">
+		<h2><%= link_to recommendation.title, recommendation_path(recommendation.id)%></h2>
+		<p><%= recommendation.user.name%></p>
+		<p><%= recommendation.body%></p>
+	</div>
+<%end%>

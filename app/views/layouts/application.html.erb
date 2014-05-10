@@ -13,7 +13,7 @@
 	<ul class="nav">
 		<% if !user_signed_in? %>
 		<li>
-			<%=button_to 'Login', new_user_session_path %>
+			<%=button_to 'Login', new_user_session_path, :class => "nav-link" %>
 		</li>
 		<%else%>
 		<li>
@@ -25,7 +25,7 @@
 
 		<%end%>
 		<li>
-			<%=button_to "Home", root_path, :method => :get %>
+			<%=button_to "Home", root_path, :method => :get, :class => "nav-link" %>
 		</li>
 	</ul>	
 </div>

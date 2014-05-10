@@ -2,4 +2,19 @@
 Heroku Link:
 http://afternoon-reaches-8605.herokuapp.com/
 
-For HW10 I added hide/unhide functionality using JavaScript.  In the Users Index (the page accessed by clicking "view users" from the home page), when you click on an individual user, the default behavior is to show the first 5 (up to 5) recommendations made by that user in alphabetical order.  I added a button which hides/unhides those recommendations.
+My App implements a platform to review movies.  The primary elements of the App are users and the recommendations that those users create.  Users can title their own reviews, which can be seen by all other users (and visitors who are not signed in).  Users can also choose to follow other users, and when you follow a user they receive an email informing them that they have gained a new follower.  Add
+
+I incuded an Ordering query to change the index page for recommendations (the view all recommendations page) to list stored recommendations alphabetically by User.  I added a .order title to the recommendations_controller to accomplish this.
+
+I also included condition, order, and limit queries to my users_controller.  Now when you select a user by from the list presented by clicking the View Users link, it lists the user's name and email, but also now follows that with a list of recommendations that user has submitted.  It queries the database for recommendations belonging to the user, orders them alphabetically, then shows up to a maximum of 5 of them (there is a limit of 5).  The view for users\show view has been altered to accomodate these queries and present the information.
+
+My App encorporates presence validations for the title and body fields of recommendations, length validations for title and body to assign maximum input lengths, and a uniqueness validation for the title field for recommendations.
+
+
+My app implements the gem Devise, which provides log-in functionality and user authentication.  Documentation for Devise can be found at http://devise.plataformatec.com.br/
+
+My app implements the Heroku addon SendGrid.  SendGrid allows my App to send outbound emails, which the app utilizes to send notifications when a user creates a new recommendation or receives a new follower.  Documentation for SendGrid can be found at https://devcenter.heroku.com/articles/sendgrid
+
+
+My Javascript/jQuery code is located in users.js.  It provides the option to Show/Hide a user's recommendations within a given User's show page.
+

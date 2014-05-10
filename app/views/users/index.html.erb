@@ -4,9 +4,37 @@
 		<td><b>Email</b></td>
 	</tr>
 	<%@users.each do |user|%>
+	
 	<tr>
+		<div class="user-link">
 		<td><%=link_to user.name, user_path(user.id)%></td>
+		</div>
 		<td><%=user.email%></td>
+			<% if user_signed_in? %>
+			<% if user.id != current_user.id %>
+			<% if Follower.where("follower_id = ? AND followee_id = ?", current_user.id, user.id).empty? %>
+				<td><%=form_for (Follower.new) do |f| %>
+					<div class="field">
+						<%= f.hidden_field :follower_id, :value => current_user.id%>
+					</div>
+					<div class="field">
+						<%= f.hidden_field :followee_id, :value => user.id%>
+					</div>
+					<div class="field">
+						<%= f.hidden_field :followee_name, :value => user.name%>
+						<%= f.hidden_field :follower_name, :value => current_user.name%>
+					</div>
+					<div class="actions">
+							<%= f.submit "Follow" %>
+					</div>
+				<%end %> </td>
+			<%else%>
+					<td><%= button_to "Unfollow", Follower.where("follower_id = ? AND followee_id = ?", current_user.id, user.id).take!, method: :delete %>
+					</td>
+			<%end%>
+			<%end%>
+			<% end %>
 	</tr>
-	<%end%>
+		<%end%>
 </table>	
+

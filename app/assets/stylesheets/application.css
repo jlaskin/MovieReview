@@ -11,16 +11,13 @@
  *= require_self
  *= require_tree .
  */
-.nav ul {
-	list-style-type: none;
+
+.rec-info {
+	font-size: 13px;
 }
 
-.nav li{
-	display: inline;
-}
-
-.nav form{
-	display: inline-block;
+.following a{
+	color: red;
 }
 
 .hide{
@@ -33,4 +30,39 @@
 	width: 50px;
 	height: 50px;
 	background-color: aqua;
+}
+
+.nav{	
+	position: relative;
+	top:0;
+	width: 100%;
+	background-image: -webkit-linear-gradient(top, #696969, #3f3f3f);
+	height: 42px;
+	box-shadow: 0px 0px 10px #333;
+}
+
+ul a{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: purple;
+}
+
+.nav li{
+	display: inline;
+	display: block;
+	float: none; 
+	list-style-type: none;
+}
+
+.nav-link{
+	padding: 10px;
+	padding-top: 13px;
+	padding-bottom: 14px;
+	text-decoration:none;
+	color: black;
+	font-weight: bold;
+	background-image: -webkit-linear-gradient(top, #66CCCC, #8FD8D8);
+	float: left;
 }
